@@ -6,10 +6,10 @@
     android:padding="16dp">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_name"
+        android:id="@+id/til_street"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_name"
+        android:hint="@string/hint_street"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
@@ -21,11 +21,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_age"
+        android:id="@+id/til_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_age"
-        app:layout_constraintTop_toBottomOf="@id/til_name"
+        android:hint="@string/hint_number"
+        app:layout_constraintTop_toBottomOf="@id/til_street"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_next"
-        app:layout_constraintTop_toBottomOf="@id/til_age"
-        app:layout_constraintEnd_toEndOf="@id/til_age"/>
+        app:layout_constraintTop_toBottomOf="@id/til_number"
+        app:layout_constraintEnd_toEndOf="@id/til_number"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
