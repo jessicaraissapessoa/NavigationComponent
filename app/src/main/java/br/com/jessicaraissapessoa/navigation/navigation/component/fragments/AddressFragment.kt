@@ -7,10 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import br.com.jessicaraissapessoa.navigation.navigation.component.databinding.FragmentAddressBinding
 import br.com.jessicaraissapessoa.navigation.navigation.component.extensions.text
-import br.com.jessicaraissapessoa.navigation.navigation.component.model.PersonModel
 
 class AddressFragment : Fragment() {
 
@@ -31,13 +31,14 @@ class AddressFragment : Fragment() {
 
         binding.btnNext.setOnClickListener {
 
-            val model = PersonModel(
+            val model = args.model.copy(
                 street = binding.tilStreet.text,
                 number = binding.tilNumber.text.toInt()
             )
+
+            val directions = AddressFragmentDirections.goToResumeFragment(model)
+            findNavController().navigate(directions)
         }
-        //TODO: Mandar os dados para outro fragment
-        //TODO: Navegar entre os fragments
     }
 
     override fun onDestroyView() {
