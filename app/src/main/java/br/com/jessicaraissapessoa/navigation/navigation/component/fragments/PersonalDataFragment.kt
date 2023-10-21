@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import br.com.jessicaraissapessoa.navigation.navigation.component.R
-import br.com.jessicaraissapessoa.navigation.navigation.component.model.PersonModel
 import br.com.jessicaraissapessoa.navigation.navigation.component.databinding.FragmentPersonalDataBinding
 import br.com.jessicaraissapessoa.navigation.navigation.component.extensions.text
+import br.com.jessicaraissapessoa.navigation.navigation.component.model.PersonModel
 
 class PersonalDataFragment : Fragment() {
 
@@ -30,10 +29,9 @@ class PersonalDataFragment : Fragment() {
                 name = binding.tilName.text,
                 age = binding.tilAge.text.toInt()
             )
-            findNavController().navigate(R.id.go_to_addressFragment)
+            val directions = PersonalDataFragmentDirections.goToAddressFragment(model)
+            findNavController().navigate(directions)
         }
-        //TODO: Mandar os dados para outro fragment
-        //TODO: Navegar entre os fragments
     }
 
     override fun onDestroyView() {
