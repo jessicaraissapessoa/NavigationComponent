@@ -27,8 +27,6 @@ Repositório destinado aos códigos que produzi no decorrer das aulas do curso "
 
 ## Screenshots
 
-<br>
-
 ### Primeiro Fragment
 
 <img src="https://github.com/jessicaraissapessoa/NavigationComponent/assets/103599234/186213f5-95e7-4897-8e92-922194366a30" width="300">
